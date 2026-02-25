@@ -4,15 +4,19 @@
 
 ### 🚀 HTML - Versione Unica Responsiva:
 
-**`index.html`** (1.1M) - **VERSIONE PRINCIPALE** ⭐⭐⭐
-- File UNICO responsive per tutti i dispositivi
+**`index.html`** (38K) - **VERSIONE PRINCIPALE** ⭐⭐⭐
+- File UNICO responsive per tutti i dispositivi (logo esterno: logo.png)
 - Auto-adattamento CSS via media queries (NO JavaScript detection)
 - Desktop (>768px): layout orizzontale con menu side-by-side
 - Tablet (768px-481px): menu impilati, ottimizzato
 - Mobile (<480px): full-width, font ridotto, perfetto per smartphone
-- Colori: riposo verde (#00a878), intervallo azzurro (#5dade2)
+- Settimana: lunedì-domenica (NON domenica-sabato)
+- Etichette: "FERIE Periodo X", "RIPOSO", "INTERVALLO" sui giorni colorati
+- Colori: riposo verde (#00a878), intervallo azzurro (#5dade2), split 50/50 con periodi
+- Nota informativa sulla cadenza dei riposi (con bordo arancione)
 - Funziona offline (file://) e online su GitHub Pages
 - ✅ Compatibile Safari, Chrome, Firefox, Edge
+- ✅ Versione 1.0 del 25-02-2026
 
 ### Python:
 - **`analisi_ferie.py`** - Script di simulazione
@@ -31,12 +35,14 @@
 **Versione Disponibile:**
 - ⭐ **`index.html`** - Unico file responsive per TUTTI i dispositivi
 
-**Ultimi Lavori Completati (Sessione Attuale):**
-- ✅ **CREATO**: File responsive unico `index.html` con CSS media queries
-- ✅ **ONLINE**: Deployed su GitHub Pages
-- ✅ **TESTATO**: Funziona su Safari, Chrome, tablet e mobile
-- ✅ **RIPULITO**: Repository - rimossi 13 file di versioni vecchie
-- ✅ **MANTENUTO**: Solo file essenziali (index.html, Python, JSON, docs)
+**Ultimi Lavori Completati (Sessione Attuale - 25-02-2026):**
+- ✅ **AGGIUNTO**: Etichette "FERIE Periodo X", "RIPOSO", "INTERVALLO" sui giorni colorati
+- ✅ **CAMBIATO**: Ordine settimana da domenica-sabato a lunedì-domenica
+- ✅ **OTTIMIZZATO**: Logo da base64 a file esterno (logo.png) - ridotto index.html da 1.1MB a 38KB (97% di riduzione!)
+- ✅ **AGGIUNTO**: Versione 1.0 e data nella scritta "Powered by"
+- ✅ **AGGIUNTO**: Nota informativa sulla cadenza dei riposi con formattazione migliorata
+- ✅ **FIXATO**: Altezza celle da `height` a `min-height` per contenere etichette
+- ✅ **FIXATO**: Colonne equidistribuite con `table-layout: fixed`
 
 **Lavori Precedenti Completati:**
 - ✅ Aggiunto menu consolidato con 12 opzioni (6 riposo+intervallo + 6 intervallo+riposo)
@@ -232,18 +238,23 @@ python -m http.server 8000
 
 ## 📝 Note Tecniche
 
-### File HTML (Versione Finale):
-- **`index.html`** (1.1M) - **UNICO FILE RESPONSIVE** ⭐
-  - Logo: **Base64 incorporato** (1.1 MB di dati)
+### File HTML (Versione Finale - v1.0):
+- **`index.html`** (38K) - **UNICO FILE RESPONSIVE** ⭐
+  - Logo: **File esterno** logo.png (826KB) - separato dal HTML
   - Struttura: Calendario generato dinamicamente con funzioni JavaScript
   - Data format: `YYYY-MM-DD` (es: 2026-06-09)
   - Funzione `refreshDisplay()` gestisce la sincronizzazione tra menu
+  - **Settimana**: lunedì-domenica (NON domenica-sabato)
+  - **Etichette dinamiche**: "FERIE Periodo X", "RIPOSO", "INTERVALLO" sui giorni colorati
+  - **Split color**: Quando giorno = periodo + riposo/intervallo, mostra entrambi i colori 50/50
+  - **Note informativa**: Spiegazione della cadenza dei riposi con bordo arancione
   - **CSS Media Queries per responsive design**:
-    - Desktop (>768px): layout orizzontale
-    - Tablet (768px-481px): menu staccati
+    - Desktop (>768px): layout orizzontale, colonne equidistribuite
+    - Tablet (768px-481px): menu staccati, min-height celle
     - Mobile (<480px): full-width, optimizzato
   - Nessun device detection JavaScript (puro CSS)
   - Compatibile con: Safari 🍎, Chrome, Firefox, Edge
+  - **Versione**: 1.0 del 25-02-2026
 
 ### File Python:
 - **`analisi_ferie.py`** - Script di simulazione
