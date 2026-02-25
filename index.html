@@ -120,6 +120,8 @@
                 padding: 8px;
                 min-height: 50px;
                 font-size: 0.9em;
+                overflow: hidden;
+                word-wrap: break-word;
             }
 
             .calendar-table th {
@@ -185,6 +187,8 @@
             font-size: 1.1em;
             background-color: white;
             width: calc(100% / 7);
+            overflow: hidden;
+            word-wrap: break-word;
         }
 
         .calendar-table td:hover {
@@ -446,6 +450,50 @@
             font-size: 0.95em;
             line-height: 1.6;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Ultra small screens (< 400px) */
+        @media (max-width: 399px) {
+            .calendar-table td {
+                min-height: 45px;
+                padding: 6px;
+                font-size: 0.9em;
+                overflow: hidden;
+                word-wrap: break-word;
+            }
+
+            .calendar-table td small {
+                font-size: 0.5em !important;
+                line-height: 1.2;
+            }
+
+            .menu-bar {
+                padding: 15px;
+                gap: 20px;
+            }
+
+            .menu-section {
+                width: 100%;
+            }
+
+            .menu-bar select {
+                font-size: 0.9em;
+                padding: 8px 10px;
+            }
+
+            h1 {
+                font-size: 1em;
+            }
+
+            .subtitle {
+                font-size: 0.75em;
+            }
+
+            .info-note {
+                padding: 10px 15px;
+                font-size: 0.85em;
+                line-height: 1.4;
+            }
         }
 
     </style>
