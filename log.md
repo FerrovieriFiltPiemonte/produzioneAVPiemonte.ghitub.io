@@ -43,6 +43,11 @@
 - ✅ **AGGIUNTO**: Nota informativa sulla cadenza dei riposi con formattazione migliorata
 - ✅ **FIXATO**: Altezza celle da `height` a `min-height` per contenere etichette
 - ✅ **FIXATO**: Colonne equidistribuite con `table-layout: fixed`
+- ✅ **OTTIMIZZATO**: Responsive design per smartphone (< 400px):
+  - Media query ultra-piccoli schermi
+  - Font-size label ridotto a 0.5em su schermi piccoli
+  - `overflow: hidden` per contenere testo nelle celle
+  - Ridimensionato padding, altezza, menu e titoli
 
 **Lavori Precedenti Completati:**
 - ✅ Aggiunto menu consolidato con 12 opzioni (6 riposo+intervallo + 6 intervallo+riposo)
